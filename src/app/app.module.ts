@@ -7,6 +7,7 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
 import { HeaderComponent } from './header/header.component'
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { PostService } from './posts/post-service';
+import { HttpClientModule } from "@angular/common/http";
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,6 +32,7 @@ import { MatExpansionModule } from '@angular/material';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
