@@ -16,3 +16,8 @@ button{
   right: 0;
 
 }
+
+mat-spinner{
+
+  margin: auto;
+}
