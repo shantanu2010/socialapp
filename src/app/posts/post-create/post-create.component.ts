@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter, OnInit } from "@angular/core";
 import { NgForm, FormGroup, FormControl, Validators } from "@angular/forms";
-import { PostService } from "../post-service";
+import { PostsService } from "../post-service";
 import { ActivatedRoute, ParamMap } from "@angular/router";
 import { Post } from "../post.model";
 import { mimeType } from "./mime-type.validator";
@@ -22,7 +22,7 @@ export class PostCreateComponent implements OnInit{
   form:FormGroup;
   imagePreview:string;
 
-  constructor(public postService:PostService,public route:ActivatedRoute){
+  constructor(public postService:PostsService,public route:ActivatedRoute){
 
 
   }
