@@ -1,14 +1,13 @@
 import { Component } from "@angular/core";
 import { NgForm } from "@angular/forms";
-import { AuthData } from "../auth-data.model";
 import { AuthService } from "../auth.service";
 
 @Component({
-  templateUrl:'./login.component.html',
-  styleUrls:['./login.component.css']
+  templateUrl:'./signup.component.html',
+  styleUrls:['./signup.component.css']
 })
 
-export class LoginComponent{
+export class SignupComponent{
 
   isLoading:boolean = false;
 
@@ -16,12 +15,14 @@ export class LoginComponent{
 
 
   }
-  onLogin(form : NgForm){
 
-    if(form.invalid){
+  onSignup(form : NgForm){
+
+    if(form.invalid)
       return;
-    }
     this.isLoading = true;
-    this.authService.login(form.value.email,form.value.password);
+    this.authService.createUser(form.value.email,form.value.password);
+    console.log(form.value);
+
   }
 }
